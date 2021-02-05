@@ -1,8 +1,8 @@
 import cv2
 
-face_cascade = cv2.CascadeClassifier(r'C:\Users\CHANDU\Desktop\opencv\face detection\haarcascade_frontalface_default.xml')
-smile_cascade = cv2.CascadeClassifier(r'C:\Users\CHANDU\Desktop\opencv\face detection\haarcascade_smile.xml')
-eye_cascade = cv2.CascadeClassifier(r'C:\Users\CHANDU\Desktop\opencv\face detection\haarcascade_eye.xml')
+face_cascade = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
+smile_cascade = cv2.CascadeClassifier(r'haarcascade_smile.xml')
+eye_cascade = cv2.CascadeClassifier(r'haarcascade_eye.xml')
 
 def detect(gray, frame):
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=10, flags=None, minSize=None, maxSize=None)
